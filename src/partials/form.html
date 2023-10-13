@@ -1,0 +1,29 @@
+<form action="#" class="review__form form">
+    <h3 class="review__sub-title">Добавить комментарий к книге</h3>
+    <div class="form__inputs">
+        <div class="form__input-group">
+            <input type="text" id="name" class="form__input" placeholder="" required>
+            <label for="name" class="forn__input-label">Имя</label>
+        </div>
+        <div class="form__input-group">
+            <input type="email" id="email" class="form__input" placeholder="" required>
+            <label for="email" class="forn__input-label">email</label>
+        </div>
+        <div class="form__input-group form__select">
+            <select name="select" id="select">
+                <option value="">Выберите книгу</option>
+                <option>JavaScript ниндзя</option>
+                <option>Pragmatic Guide to JavaScript</option>
+                <option>Pro JavaScript Techniques</option>
+                <option>Выразительный JavaScript</option>
+            </select>
+        </div>
+        <div class="form__textarea-group">
+            <textarea id="textarea" rows="8" class="form__input form__input_textarea" placeholder=""
+                required></textarea>
+            <label for="textarea" class="forn__input-label">Ваш отзыв</label>
+        </div>
+    </div>
+    <input type="submit" class="button form__button" value="Отправить">
+
+</form>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    @include('partials/header.html')
+    <main class="main">
+      <section class="firstblock">
+        <div class="container">
+          <div class="firstblock__title">
+            <h1>Путь JavaScript</h1>
+          </div>
+        </div>
+        <div class="firstblock__wrapper">
+          <div class="firstblock__image container">
+            <picture>
+              <source srcset="./img/books.webp" type="image/webp">
+              <img loading="lazy" src="./img/books.jpg" class="image" width="738" height="300" alt="Изображения книг">
+            </picture>
+            <div class="firstblock__date"><span>12</span> Апреля</div>
+          </div>
+          <p class="firstblock__description container">Можно выделить три основных направления для прогресса JavaScript
+          </p>
+        </div>
+        <div class="container">
+          <hr class=" firstblock__border">
+        </div>
+
+      </section>
+      <section class="server">
+        <div class="server__wrapper container">
+          <h2 class="title server__title">Серверный JavaScript</h2>
+          <div class="server__quote">
+            <p>Разработчики и клиенты часто неправильно понимают, что такое система. Они видят графический интерфейс и
+              думают, что он и есть система. Они определяют систему в терминах графического интерфейса и считают, что
+              должны сразу начать работу с графическим интерфейсом. Они не понимают важнейшего принципа: ввод/вывод не
+              важен.
+              <span class="server__author">— Р. Мартин</span>
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="advertisement">
+        <div class="advertisement__wrapper container">
+          <div class="advertisement__banner">
+            <picture>
+              <source srcset="./img/banner.webp" media="(min-width:768px)" type="image/webp">
+              <source srcset="./img/banner-mob.webp" media="(max-width:768px)" type="image/webp">
+              <img loading="lazy" src="./img/banner.jpg" class="image" width="" height="" alt="">
+            </picture>
+            <p class="advertisement__description">Реклама на<a href="#"> blabla.com</a></p>
+          </div>
+        </div>
+      </section>
+      <section class="conclusion">
+        <div class="conclusion__wrapper container">
+          <h2 class="title conclusion__title">Заключение</h2>
+          <p class="conclusion__text">Синхрония осознаёт сюжетный верлибр. Мифопорождающее текстовое устройство
+            диссонирует лирический субъект. Абстрактное высказывание пространственно просветляет деструктивный символ.
+            Ямб, несмотря на то, что все эти характерологические черты отсылают не к единому образу нарратора,
+            интегрирует мифопоэтический хронотоп. Действительно, ударение приводит палимпсест. Контрапункт приводит
+            ритм.</p>
+        </div>
+      </section>
+      <section class="review">
+        <div class="review__wrapper container">
+          <h2 class="review__title title">
+            Что вы думаете об этой книге?
+          </h2>
+          <div class="review__score">
+            <h3 class="review__sub-title">Оцените статью</h3>
+            <div class="review__block">
+              <div class="review__assessment ">4</div>
+              <ul class="review__stars stars">
+                <li class="stars_active">
+                  <svg class="" width="25" height="23">
+                    <use href="img/sprite.svg#star"></use>
+                  </svg>
+                </li>
+                <li class="stars_active">
+                  <svg class="" width="25" height="23">
+                    <use xlink:href="img/sprite.svg#star"></use>
+                  </svg>
+                </li>
+                <li class="stars_active">
+                  <svg class="" width="25" height="23">
+                    <use xlink:href="img/sprite.svg#star"></use>
+                  </svg>
+                </li>
+                <li class="stars_active">
+                  <svg class="" width="25" height="23">
+                    <use xlink:href="img/sprite.svg#star"></use>
+                  </svg>
+                </li>
+                <li class="">
+                  <svg class="" width="25" height="23">
+                    <use xlink:href="img/sprite.svg#star"></use>
+                  </svg>
+                </li>
+              </ul>
+            </div>
+          </div>
+          @include('partials/form.html')
+        </div>
+      </section>
+      <section class="posts">
+        <div class="posts_wrapper ">
+          <div class="container">
+            <h2 class="title posts__title">Похожие посты</h2>
+          </div>
+          <div class="swiper posts__swiper container">
+            <div class="swiper-wrapper posts__list">
+              <a href="#" class="swiper-slide posts__item">
+                <div class="posts__image">
+                  <picture>
+                    <source srcset="./img/posts/1.webp" type="image/webp">
+                    <img loading="lazy" src="./img/posts/1.jpg" class="image" width="226" height="226" alt="">
+                  </picture>
+                </div>
+                <div class="posts__info">
+                  <div class="post__date">12 декабря</div>
+                  <h3 class="posts__sub-title">События жизненного цикла ReactJS</h3>
+                </div>
+              </a>
+              <a href="#" class="swiper-slide posts__item">
+                <div class="posts__image">
+                  <picture>
+                    <source srcset="./img/posts/2.webp" type="image/webp">
+                    <img loading="lazy" src="./img/posts/2.jpg" class="image" width="226" height="226" alt="">
+                  </picture>
+                </div>
+                <div class="posts__info">
+                  <div class="post__date">10 декабря</div>
+                  <h3 class="posts__sub-title">CSS Grids. Полное руководство</h3>
+                </div>
+              </a>
+              <a href="#" class="swiper-slide posts__item">
+                <div class="posts__image">
+                  <picture>
+                    <source srcset="./img/posts/3.webp" type="image/webp">
+                    <img loading="lazy" src="./img/posts/3.jpg" class="image" width="226" height="226" alt="">
+                  </picture>
+                </div>
+                <div class="posts__info">
+                  <div class="post__date">5 декабря</div>
+                  <h3 class="posts__sub-title">Асинхронность в JavaScript</h3>
+                </div>
+              </a>
+            </div>
+
+          </div>
+          <div class="swiper-pagination posts__pagination"></div>
+        </div>
+      </section>
+    </main>
+    @include('partials/modal.html')
+  </div>
+</body>
+
+</html>

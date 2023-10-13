@@ -1,0 +1,129 @@
+.header {}
+
+.header__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2.5rem;
+
+    @include small-tablet {
+        align-items: flex-start;
+    }
+}
+
+
+.header__logo {}
+
+.header__nav {
+    align-self: normal;
+    display: flex;
+    align-items: center;
+
+    .nav__list {
+        display: flex;
+        align-items: center;
+        gap: 2.19rem;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        height: 100%;
+    }
+
+    @include small-tablet {
+        display: none;
+    }
+}
+
+.nav__item {
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    a {
+        font-size: 0.9375rem;
+        font-weight: 500;
+        color: var(--black-color);
+        transition: all 0.3s;
+
+        &:hover {
+            color: var(--blue-color);
+        }
+    }
+}
+
+.nav__item_has-children {
+    position: relative;
+
+    &::after {
+        width: 8px;
+        height: 6px;
+        display: inline-block;
+        content: '';
+        mask: url(../../img/svg/arrow.svg) no-repeat;
+        mask-size: cover;
+        background-color: var(--black-color);
+        position: absolute;
+        right: -12px;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: all 0.3s;
+    }
+
+    &:hover {
+        &::after {
+            background-color: var(--blue-color);
+            transform: rotate(180deg) translateY(50%);
+        }
+
+        .nav__sub-menu {
+            display: block;
+        }
+    }
+}
+
+.nav__sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    border-radius: 6px;
+    background: #FFF;
+    box-shadow: 0px 18px 60px 0px rgba(0, 0, 0, 0.05);
+    padding: 0.875rem 1.625rem 1.0625rem 0.9375rem;
+    white-space: nowrap;
+
+    li:not(:last-child) {
+        margin-bottom: 0.81rem;
+    }
+
+    a {
+        font-weight: 400;
+        font-size: 0.8125rem;
+        letter-spacing: 0.00813rem;
+
+        &:hover {
+            color: var(--black-color);
+        }
+    }
+}
+
+.header__button {
+    height: 2.5rem;
+    text-transform: none;
+
+    @include small-tablet {
+        display: none;
+    }
+}
+
+
+.burger {
+    @include burger;
+    display: none;
+
+    @include tablet {
+        display: block;
+    }
+}
